@@ -174,12 +174,13 @@ module.exports = function (dataObj, currentTab) {
           cancelButtonLabel: 'cancel',
           cancelButtonColor: '#369'
         };
-
+if(datePicker){
         datePicker.show(options, function (date) {
           console.error("date result " + date);
           txtDatPly.set("text", date);
           data_send.push({ datePlay: date });
         });
+}
       })
 
       /*****date end */
@@ -206,12 +207,13 @@ module.exports = function (dataObj, currentTab) {
           cancelButtonLabel: 'cancel',
           cancelButtonColor: '#369'
         };
-
+if(datePicker){
         datePicker.show(options, function (date) {
           console.error("date end result " + date);
           txtDatEnd.set("text", date);
           data_send.push({ dateEnd: date });
         });
+}
       })
 //add exetn maps
 var mapslt = new tabris.TextView({

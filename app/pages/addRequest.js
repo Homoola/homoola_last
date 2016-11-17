@@ -32,7 +32,7 @@ module.exports = function (dataObj, currentTab) {
   //play get appCategories
   function getz() {
     console.log("play getz")
-    getJSON("https://homoola.com/en/apis/categories").then(function (json) {
+    getJSON("http://homoola.com/apis/categories").then(function (json) {
       console.log(json)
       mainMyRecJson(json)
     });

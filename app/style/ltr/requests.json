@@ -1,0 +1,215 @@
+{
+    "cardsWindo": {
+        "background": "#cfceca",
+        "itemHeight": 170,
+        "refreshEnabled": true,
+        "layoutData": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+        }
+    },
+    "requestCard": {
+        "background": "#FFFFFF",
+        "cornerRadius": 0,
+        
+        "layoutData": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "height": 169
+        }
+    },
+    "cardIcon": {
+        "layoutData": {
+            "height": 50,
+            "width": 50,
+            "left": 15,
+            "top": 15
+        },
+        "tintColor": "#FFFFFF"
+    },
+    "cardTitle": {
+        "layoutData": {
+            "top": 25,
+            "left": ".cardIcon 15",
+            "right":5
+        },
+        "font": "bold 16px",
+        "textColor": "#696969",
+        "maxLines": 2
+    },
+    "distanceImage": {
+        "layoutData": {
+            "width": 16,
+            "height": 16,
+            "left": ".cardIcon 5",
+            "top": ".cardTitle 5"
+        },
+        "image": {
+            "src": "./app/images/icons/Polyline-50.png"
+        }
+    },
+    "distanceText": {
+        "layoutData": {
+            "left": ".distanceImage 5",
+            "top": ".cardTitle 2"
+        },
+        "font": "15px",
+        "textColor": "#8d8d8d"
+    },
+    "authorRatingIcon": {
+        "layoutData": {
+            "width": 16,
+            "height": 16,
+            "left": ".distanceImage 100",
+            "top": ".cardTitle 5"
+        },
+        "image": {
+            "src": "./app/images/icons/peviewer-Male-50.png"
+        }
+    },
+    "stars": {
+        "layoutData": {
+            "top": ".cardTitle 5",
+            "left": ".authorRatingIcon 2",
+            "height":16
+        },
+        "tintColor": "#f4c600"
+
+    },
+    "authorRating": {
+        "layoutData": {
+            "top": ".cardTitle 1",
+            "left": "prev() 2"
+        },
+        "font": "18px"
+    },
+    "cardFooter": {
+        "background": "#FFF",
+        "layoutData": {
+            "left": 0,
+            "bottom": 1,
+            "right": 0,
+            "height": 100
+        },
+        "cornerRadius": 2
+    },
+    "timeToEnd": {
+        "layoutData": {
+            "centerY": 0,
+            "right": ".cardIconBox 10"
+        },
+        "alignment": "left",
+        "textColor": "green"
+    },
+    "lowBid": {
+        "left": 10,
+        "height": 30,
+        "centerY": 0,
+        "textColor": ".#234",
+        "alignment": ".left",
+        "markupEnabled": false
+    },
+    "lineTextH": {
+        "background": ".#f1f1f1",
+        "layoutData": {
+            "left": 1,
+            "right": 1,
+            "height": 1,
+            "top": 0
+        }
+    },
+    "fromIcon": {
+        "layoutData": {
+            "height": 16,
+            "width": 16,
+            "left": 1,
+            "top": 72
+        },
+        "image": "./app/images/icons/Marker-104.png",
+        "tintColor": "#98d968"
+    },
+    "toIcon": {
+        "layoutData": {
+            "height": 18,
+            "width": 18,
+            "left": 20,
+            "top": "prev() -15"
+        },
+        "image": "./app/images/icons/Marker-104.png",
+        "tintColor": "#f98d90"
+    },
+    "fromDistinstionText": {
+        "layoutData": {
+            "left": ".fromIcon 5",
+            "top": 70
+        },
+        "alignment": "left",
+        "textColor": "#0594C4",
+        "font": "bold 15px"
+    },
+    "toDistinstionText": {
+        "layoutData": {
+            "left": ".toIcon 5",
+            "top": ".fromDistinstionText 3"
+        },
+        "font": "bold 15px",
+        "textColor": "#036687",
+        "alignment": "left"
+    },
+    "readyShipmentText": {
+        "layoutData": {
+            "left": "prev() 5",
+            "top": 70
+        },
+        "textColor": "#827F75",
+        "font": "14px"
+    },
+    "pickDateText": {
+        "layoutData": {
+            "left": "prev() 5",
+            "top": ".fromIcon 6"
+        },
+        "textColor": "#827F75",
+        "font": "14px"
+    },
+     "lowBidIcon": {
+        "layoutData": {
+            "height": 16,
+            "width": 16,
+            "left": 5,
+            "bottom":5
+        },
+        "image": "./app/images/icons/LowPrice-100.png",
+        "tintColor": "#0ccc7a"
+    },
+     "lowBidText":{
+        "layoutData": {
+            "left": "prev() 5",
+            "bottom": "5"
+        },
+        "textColor": "#827F75",
+        "font": "14px"
+},
+ "expirationDateIcon":{
+            "layoutData": {
+            "height": 16,
+            "width": 16,
+            "right": "prev() 5",
+            "bottom":5
+        },
+        "image": "./app/images/icons/Future-100.png",
+        "tintColor": "#0ccc7a"
+ },
+  "expirationDateText":{
+        "layoutData": {
+            "right": "5",
+            "bottom": "5"
+        },
+        "textColor": "#827F75",
+        "font": "14px"
+  }
+
+}

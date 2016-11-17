@@ -1,0 +1,47 @@
+{
+    "homeScroll": {
+        "direction": "vertical",
+        "layoutData": {
+            "right": 0,
+            "left": 0,
+            "top": 0,
+            "bottom": 0
+        }
+    },
+    "topBackground": {
+        "background": "#eab64e",
+        "layoutData": {
+            "right": 0,
+            "left": 0,
+            "top": 0,
+            "height": 250
+        }
+    },
+    "tabButton": {
+       "background": "#FFFFFF"
+    },
+    "tabButtonLeft": {
+        "layoutData": {
+            "left": 10
+        }
+    },
+    "tabButtonRight": {
+        "layoutData": {
+            "right": 10
+        }
+    }
+    ,
+    "tabButtonCenter": {
+        "layoutData": {
+            "centerX": 0
+        }
+    },
+    "addRequestButton": {
+        "layoutData": {
+            "width": 70,
+            "height": 70,
+            "bottom": 5,
+            "right": 5
+        }
+    }
+}

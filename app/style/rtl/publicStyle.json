@@ -1,0 +1,38 @@
+{
+    "#pageHomoola": {
+        "background": "red"
+    },
+    "#homeTabs": {
+        "background": "#f9f9f9",
+        "textColor": "#2f88b8",
+        "layoutData": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+        }
+    },
+    "#aroundMeTab": {
+        "image": {
+            "src": "../app/images/card.png",
+            "scale": 2
+        },
+        "selectedImage": {
+            "src": "../app/images/card.png",
+            "scale": 2
+        }
+    },
+    "#myRequestTab": {
+        "image": {
+            "src": "../app/images/card.png",
+            "scale": 2
+        },
+        "selectedImage": {
+            "src": "../app/images/card.png",
+            "scale": 2
+        }
+    },
+    "#iconBox":{
+      "background": "#cfceca"
+    }
+}

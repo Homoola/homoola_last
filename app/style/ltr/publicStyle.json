@@ -1,0 +1,94 @@
+{
+    "#pageHomoola": {
+        "background": "#FFFFFF"
+    },
+    "#homeTabs": {
+        "background": "#f9f9f9",
+        "textColor": "#2f88b8",
+        "layoutData": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+        }
+    },
+    "#registrationTab":{
+        "background": "#eab64e"
+    },
+    "#aroundMeTab": {
+        "image": {
+            "src": "../app/images/card.png",
+            "scale": 2
+        },
+        "selectedImage": {
+            "src": "../app/images/card.png",
+            "scale": 2
+        }
+    },
+    "#myRequestTab": {
+        "image": {
+            "src": "../app/images/card.png",
+            "scale": 2
+        },
+        "selectedImage": {
+            "src": "../app/images/card.png",
+            "scale": 2
+        }
+    },
+    "#trackingTab": {
+        "background": "#FFFFFF",
+        "image": {
+            "src": "../app/images/card.png",
+            "scale": 2
+        },
+        "selectedImage": {
+            "src": "../app/images/card.png",
+            "scale": 2
+        }
+    },
+    "#iconBox": {
+        "background": "#cfceca"
+    },
+    "#trayTitleTxt": {
+        "alignment": "center",
+        "font": "15px",
+        "textColor": "#eab64e",
+        "layoutData": {
+            "centerX": 0,
+            "centerY": 0
+        }
+    },
+    "#trayContent": {
+        "layoutData": {
+            "left": 0,
+            "right": 0,
+            "top": "#strap -25",
+            "bottom": 0
+        },
+        "background": "rgba(0,0,0,0.8)"
+    }, 
+     "#addRequestBtn": {
+        "layoutData": {
+            "centerX": 0,
+            "centerY": 0,
+            "width":70,
+            "height": 70
+        }
+    },
+     "#buttonForAddRequestTab": {
+        "layoutData": {
+            "width": 70,
+            "height": 70,
+            "bottom": 10,
+            "right": 10
+        }
+    },
+     "#buttonForEditRequestTab": {
+        "layoutData": {
+            "width": 70,
+            "height": 70,
+            "bottom": 10,
+            "right": 10
+        }
+    }
+}

@@ -5,7 +5,7 @@
         Homoola Application 
     </description>
     <author email="devapp@homoola.com" href="https://homoola.com">
-        Yahya & Ibrahim
+        Yahya and Ibrahim
     </author>
 	<access origin="*" />
   <preference name="EnableDeveloperConsole" value="false" />

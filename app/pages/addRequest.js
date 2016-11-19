@@ -174,13 +174,13 @@ module.exports = function (dataObj, currentTab) {
           cancelButtonLabel: 'cancel',
           cancelButtonColor: '#369'
         };
-if(datePicker){
-        datePicker.show(options, function (date) {
-          console.error("date result " + date);
-          txtDatPly.set("text", date);
-          data_send.push({ datePlay: date });
-        });
-}
+        if (datePicker) {
+          datePicker.show(options, function (date) {
+            console.error("date result " + date);
+            txtDatPly.set("text", date);
+            data_send.push({ datePlay: date });
+          });
+        }
       })
 
       /*****date end */
@@ -207,31 +207,100 @@ if(datePicker){
           cancelButtonLabel: 'cancel',
           cancelButtonColor: '#369'
         };
-if(datePicker){
-        datePicker.show(options, function (date) {
-          console.error("date end result " + date);
-          txtDatEnd.set("text", date);
-          data_send.push({ dateEnd: date });
-        });
-}
+        if (datePicker) {
+          datePicker.show(options, function (date) {
+            console.error("date end result " + date);
+            txtDatEnd.set("text", date);
+            data_send.push({ dateEnd: date });
+          });
+        }
       })
-//add exetn maps
-var mapslt = new tabris.TextView({
+      //add exetn maps
+      var mapslt = new tabris.TextView({
         layoutData: { top: [bttDatEnd, 15], centerX: 0 }
       }).appendTo(pageDate);
       //
- var map = new esmaps.Map({
-    left: 0, right: 0, top: [txtDatEnd,15], bottom: 20
-  }).on("ready", function() {
-    this.on("change:camera", function(source){
-       var region = this.get("region");
-      "southWest: [ " + (region.southWest[0]) + ", " + (region.southWest[1]);
-    })
-      .on("cameramove", function(source){
+      var map = new esmaps.Map({
+        left: 0, right: 0, top: [txtDatEnd, 15], bottom: 40
+      }).on("ready", function () {
+        this.on("change:camera", function (source) {
+          var region = this.get("region");
+          "southWest: [ " + (region.southWest[0]) + ", " + (region.southWest[1]);
+        })
+          .on("cameramove", function (source) {
+            //
+          })
+          .set("region", { southWest: [24.725398, 46.2620111], northEast: [24.825398, 46.3620111] });
+      }).appendTo(pageDate);
+      //***shosser image & send to cloud nary
+      var bttDatImg = new tabris.Button({
+        text: "shoose img",
+        layoutData: { top: [map, 5], centerX: 0 }
+      }).on("select", function () {
+        //
+        navigator.camera.getPicture(onSuccess, onFail, {
+          quality: 50,
+          targetWidth: 1024,
+          targetHeight: 1024,
+          destinationType: window.Camera.DestinationType.FILE_URI
+        });
+        function onSuccess(imageData) {
 
-      })
-      .set("region", {southWest: [24.725398,46.2620111], northEast: [24.825398,46.3620111]});
-  }).appendTo(pageDate);
+          // image data should be a file:// URI, as returned from the Camera plugin
+          cordova.plugins.cloudinary.upload(
+            function (result) {
+              txtDatEnd.set("text", "we resultimg:" + result.public_id);
+              console.log('===== result =====');
+              console.log(result);
+              /*
+                  result is the JSON returned from Cloudinary on successful upload:
+  
+                  {
+                      bytes = 4299687;
+                      "created_at" = "2015-03-31T05:24:52Z";
+                      etag = 38825bcbea005ba3c5da79591625f098;
+                      format = jpg;
+                      height = 2448;
+                      "public_id" = e9fz4zcrvf5n4clmlh1s;
+                      "resource_type" = image;
+                      "secure_url" = "https://.../e9fz4zcrvf5n4clmlh1s.jpg";
+                      signature = d87e52bd9facd534cf2c6bdc3a6707a97036232c;
+                      tags =     (
+                      );
+                      type = upload;
+                      url = "http://.../e9fz4zcrvf5n4clmlh1s.jpg";
+                      version = 1427779492;
+                      width = 3264;
+                  }
+              */
+            },
+            function (error) {
+              txtDatEnd.set("text", "err :( :" + error);
+              console.log('===== error =====');
+              console.log(error);
+            },
+            function (progress) {
+              txtDatEnd.set("text", "progress :" + progress);
+              console.log('===== progress =====');
+              console.log(progress);
+
+              /*
+                  progress: {
+                      totalBytesWritten: [total number of bytes written so far]
+                      totalBytesExpectedToWrite: [total number of bytes for the file]
+                  }
+              */
+            },
+            imageData
+          );
+        }
+
+        function onFail(message) {
+          console.log('Failed because: ' + message);
+        }
+        //**end
+      }).appendTo(pageDate);
+      //end 
 
     }
     //**end fndate

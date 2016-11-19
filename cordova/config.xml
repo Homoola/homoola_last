@@ -21,6 +21,12 @@
 	<plugin name="cordova-plugin-camera"/>
 	<plugin name="cordova-plugin-datepicker" />
 	<plugin name="cordova-plugin-file-transfer"/>
+	<plugin name="https://github.com/collectmeaustralia/cordova-cloudinary-upload.git">
+	   <variable name="CLOUD_NAME" value="wino" />
+		<variable name="API_KEY" value="398969264258766" />
+		<variable name="API_SECRET" value="5TKTZcWtJ7muMtzaZ3S7oBSQ9HM" />
+	</plugin>
+	
 	<hook src="scripts/android_api_key.js" type="before_platform_add" />
   
 
